@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formsender</title>
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="menu-black-background"></div>
     <div class="container">
-
         <header class="top-head">
             <div class="brand-with-log">
                 <div class="logo-img">
@@ -43,10 +40,6 @@
                         <a href="#">JS example</a>
                     </li>
                     <li class="menu-item">
-                        <img src="img/file_icon.png" alt="Formsender logo">
-                        <a href="#">Test form</a>
-                    </li>
-                    <li class="menu-item">
                         <img src="img/contact.png" alt="Formsender logo">
                         <a href="#">Contact</a>
                     </li>
@@ -69,22 +62,117 @@
                     </p>
                 </section>
             </main>
-            <section class="html-example">
-                <h1 class="header-of-html">HTML Example</h1>
-
-            </section>
+            <div class="example-wrapper">
+                <section class="block-example">
+                    <h1 class="header-of-example">HTML Example</h1>
+                    <article class="usage-article">
+                        <h3>Setup the Your HTML form</h3>
+                        <p>Set your form's action-attribute to <span>https://tranquil-sierra-86540.herokuapp.com/example@email.com</span> and replace example@email.com with your own email.</p>
+                    </article>
+                    <article class="usage-article">
+                        <h3>Add a name-attribute to every field</h3>
+                        <p>Ensure that all of input, select and textarea tags inside your form have a <strong>name</strong> attribute.</p>
+                    </article>
+                    <article class="usage-article">
+                        <h3>Submit the form</h3>
+                        <p>Go to your website and submit the form, and you will receive email with form data.</p>
+                    </article>
+                </section>
+                <section class="form-example">
+                    <h1 class="header-of-form-example">Form example</h1>
+                    <div class="code-block">
+                        <p>&lt;<span class="elem">form</span> <span class="attr">method</span>="<span class="value">POST</span>" <span class="attr">action</span>="<span class="value">https://tranquil-sierra-86540.herokuapp.com/example@email.com</span>"&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="elem">input</span> <span class="attr">type</span>="<span class="value">text</span>" <span class="attr">name</span>="<span class="value">user_name</span>"&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="elem">input</span> <span class="attr">type</span>="<span class="value">email</span>" <span class="attr">name</span>="<span class="value">user_email</span>"&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="elem">input</span> <span class="attr">type</span>="<span class="value">submit</span>" <span class="attr">value</span>="<span class="value">Send</span>"&gt;</p>
+                        <p>&lt;/<span class="elem">form</span>&gt;</p>
+                    </div>
+                </section>
+            </div>
+            <div class="example-wrapper add-margin-top">
+                <section class="block-example">
+                    <h1 class="header-of-example">JS Example</h1>
+                    <article class="usage-article">
+                        <h3>Setup the Your JS code</h3>
+                        <p>Set your request's url to <span>https://tranquil-sierra-86540.herokuapp.com/example@email.com</span> and replace example@email.com with your own email.</p>
+                    </article>
+                    <article class="usage-article">
+                        <h3>Set mathod</h3>
+                        <p>Ensure that the method of request's set to POST.</p>
+                    </article>
+                    <article class="usage-article">
+                        <h3>Set data type</h3>
+                        <p>Ensure that the property dataType of request's set to json.</p>
+                    </article>
+                </section>
+                <section class="form-example">
+                    <h1 class="header-of-form-example">Request example</h1>
+                    <div class="code-block">
+                        <p>$.<span class="attr">ajax</span>({</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;url<span class="attr">:</span> <span class="value">'https://tranquil-sierra-86540.herokuapp.com/example@gmail.com"</span>,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;method<span class="attr">:</span> <span class="value">'POST'</span>,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;data<span class="attr">:</span> {</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name<span class="attr">:</span> <span class="value">'John'</span>,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surname<span class="attr">:</span> <span class="value">'Smith'</span></p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;},</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;dataType<span class="attr">:</span> <span class="value">'json'</span></p>
+                        <p>});
+                    </div>
+                </section>
+            </div>
+            <div class="contact-block">
+                <h1>Feel free to contact wit us</h1>
+                <div class="contact">
+                    <div class="formsender-logo">
+                        <img src="img/form_ico.png" alt="Formsender logo">
+                    </div>
+                    <form class="form-contact">
+                        <div class="form-group">
+                            <label> Your name:
+                                <input class="form-input" type="text" name="user-name" placeholder="John Smith">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label> Email Address:
+                                <input class="form-input" type="email" name="user-email" placeholder="john@gmail.com">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label> Your Message:
+                                <textarea class="form-textarea" name="user-msg" rows="8" placeholder="Better than formspree"></textarea>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button class="form-btn" type="submit" name="submit-form">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="map"></div>
+            <footer>
+                <div class="footer-row">
+                    <div class="bottom-block-footer">
+                        <div class="left-text-footer">
+                            <p class="footer-text-copyright">
+                                Copyright © 2018 Yevhen Kondratyev.
+                                All rights reserved.
+                            </p>
+                        </div>
+                        <div class="right-social-icons">
+                            <a href="https://www.facebook.com/yevhen.kondratyev">
+                                <img src="img/fb_ico.png" alt="Facebook icon">
+                            </a>
+                            <a href="https://www.linkedin.com/in/yevhen-kondratyev-4191b459/">
+                                <img src="img/li_ico.png" alt="Linkedin icon">
+                            </a>
+                            <a href="https://github.com/ykondrat">
+                                <img src="img/gh_icon.png" alt="Github icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <pre>
-            $.ajax({
-                url: "https://tranquil-sierra-86540.herokuapp.com/example@gmail.com",
-                method: "POST",
-                data: {
-                    name: 'John',
-                    surname: 'Smith'
-                },
-                dataType: "json"
-            });
-        </pre>
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7VyAzGnWgNjpdVRPBJIPiYGHfna3IUG4"></script>
     <script src="js/index.js"></script>
