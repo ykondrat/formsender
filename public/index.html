@@ -4,19 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>formsender</title>
+    <title>Formsender</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <pre>
-        $.ajax({
-            url: "https://tranquil-sierra-86540.herokuapp.com/example@gmail.com",
-            method: "POST",
-            data: {
-                name: 'John',
-                surname: 'Smith'
-            },
-            dataType: "json"
-        });
-    </pre>
+    <div class="menu-black-background"></div>
+    <div class="container">
+
+        <header class="top-head">
+            <div class="brand-with-log">
+                <div class="logo-img">
+                    <img src="img/form_ico.png" alt="Formsender logo">
+                </div>
+                <div class="brand-name">
+                    <h1 class="header-brand-name">
+                        Formsender
+                    </h1>
+                </div>
+            </div>
+            <nav class="sidenav">
+                <div class="mobile-btn">
+                    <div class="nav-btn-container">
+                        <div class="nav-btn"></div>
+                    </div>
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <img src="img/form_ico.png" alt="Formsender logo">
+                        <a href="#">Main</a>
+                    </li>
+                    <li class="menu-item">
+                        <img src="img/html.png" alt="Formsender logo">
+                        <a href="#">HTML example</a>
+                    </li>
+                    <li class="menu-item">
+                        <img src="img/js.png" alt="Formsender logo">
+                        <a href="#">JS example</a>
+                    </li>
+                    <li class="menu-item">
+                        <img src="img/file_icon.png" alt="Formsender logo">
+                        <a href="#">Test form</a>
+                    </li>
+                    <li class="menu-item">
+                        <img src="img/contact.png" alt="Formsender logo">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <main>
+                <section class="main-info">
+                    <h1 class="header-of-section">Functional HTML forms</h1>
+                    <p class="main-info-text">
+                        Just set action in your form with our URL and server will forwad it to your email.
+                        Our Server much faster, because we use <span class="nodejs-span">NodeJS</span> instead of <span class="php-span">PHP</span> or something else!!!
+                    </p>
+                </section>
+                <section class="main-info">
+                    <h1 class="header-of-section add-fire">With love to JavaScript</h1>
+                    <p class="main-info-text second">
+                        We use only the latest and fastest technology. Such as <span>ES6</span>, <span>ReactJS</span>, <span>Redux</span>, <span>HTML5</span>, <span>CSS3</span>, <span>NodeJS</span>, <span>MongoDB</span> & <span>D3.JS</span>.
+                    </p>
+                </section>
+            </main>
+            <section class="html-example">
+                <h1 class="header-of-html">HTML Example</h1>
+
+            </section>
+        </div>
+        <pre>
+            $.ajax({
+                url: "https://tranquil-sierra-86540.herokuapp.com/example@gmail.com",
+                method: "POST",
+                data: {
+                    name: 'John',
+                    surname: 'Smith'
+                },
+                dataType: "json"
+            });
+        </pre>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7VyAzGnWgNjpdVRPBJIPiYGHfna3IUG4"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

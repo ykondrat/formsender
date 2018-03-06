@@ -1,0 +1,47 @@
+:root {
+    font-size: 12px;
+}
+a, abbr, area, address, article, aside, audio, b,
+body, br, blockquote, button, canvas, code, cite, caption, div, dd, dt, dl,
+em, form, footer, fieldset, figure, figcaption, html, h1, h2, h3, h4, h5, h6,
+header, hr, i, img, iframe, input, kbd, li, label, legend, main, nav, ol,
+option, p, pre, select, span, strong, section, small, summary, td, table, th,
+textarea, tr, tfoot, tbody, thead, ul, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+a {
+    color: #000;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active, a:visited {
+    color: inherit;
+}
+b, strong {
+    font-weight: bolder;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    border-style: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}

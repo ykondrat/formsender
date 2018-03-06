@@ -1,7 +1,7 @@
 {
   "name": "formsender",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://tranquil-sierra-86540.herokuapp.com/",
   "main": "index.js",
   "engines": {
     "node": "8.9.1"
