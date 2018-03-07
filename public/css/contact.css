@@ -66,8 +66,9 @@
     padding: 5px;
     font-family: 'Play', sans-serif;
     border-radius: 4px;
-    color: #9000ff;
-    background-color: #f9f9f9;
+    color: #f9f9f9;
+    font-weight: bold;
+    background-color: #9000ff;
     transition: 0.5s;
     -webkit-box-shadow: 0px 0px 7px 1px #9000ff;
     -moz-box-shadow: 0px 0px 7px 1px #9000ff;
@@ -75,7 +76,7 @@
 }
 .form-btn:hover {
     color: #f9f9f9;
-    background-color:#9000ff;
+    background-color:#b049ff;
 }
 .map {
     position: absolute;

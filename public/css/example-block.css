@@ -37,10 +37,11 @@
     font-weight: bold;
 }
 .code-block {
+    background-color: #17354b;
     font-family: 'Play', sans-serif;
     margin-top: 20px;
     margin-left: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     padding: 10px;
     border-radius: 8px;
