@@ -30,13 +30,23 @@ app.post('/:email', (req, res) => {
     let output = '';
 
     for (let element in req.body) {
-        output += element + ': ' + req.body[element] + '<br>';
+        output +=   `<p class="info" style="font-weight: normal; color: black; margin-left: 10px;">
+                        <span class="key" style="font-weight: bold; color: #727272;">${element}: </span>
+                        <span class="text">${req.body[element]} </span>
+                    </p>`;
     }
     const mailOptions = {
         from: 'formsenderio@gmail.com',
         to: req.params.email,
         subject: 'Formsender io (ykondrat)',
-        html: `<div>${output}</div>`
+        html: `
+            <div>
+                <h1 style="text-align: center; font-weight: bold; color: #9000ff;"> Formsender io (ykondrat) </h1>
+                <p style="font-weight: bold; color: #727272; margin: 5px 0;">Somebody wrote you:</p>
+                <div>
+                    ${output}
+                </div>
+            </div>`
     };
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
