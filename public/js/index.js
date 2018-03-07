@@ -8,6 +8,7 @@ function ready() {
     function toggleButton() {
         headerMenuButton.classList.toggle('close');
         document.querySelector('.menu-list').classList.toggle('open');
+        document.querySelector('.black-block').classList.toggle('open-black-background');
         headerMenuButton.removeEventListener('click', toggleButton, false);
         setTimeout(() => {
             document.querySelector('.mobile-btn').classList.toggle('mobile-close');
