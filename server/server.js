@@ -26,6 +26,37 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.post('/contact-form', (req, res) => {
+    const mailOptions = {
+        from: 'formsenderio@gmail.com',
+        to: 'kondratyev.yevhen@gmail.com',
+        subject: 'Formsender io (ykondrat)',
+        html: `
+            <div>
+                <h1 style="text-align: center; font-weight: bold; color: #9000ff;"> Formsender io (ykondrat) </h1>
+                <p style="font-weight: bold; color: #727272; margin: 5px 0;">Somebody wrote you:</p>
+                <div>
+                    Name: ${req.body.name}
+                </div>
+                <div>
+                    Email: ${req.body.email}
+                </div>
+                <div>
+                    Msg: ${req.body.msg}
+                </div>
+            </div>`
+    };
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            console.log(error);
+            res.status(400).send({ text : "OMG" });
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).send({ text : "OK" });
+        }
+    });
+});
+
 app.post('/:email', (req, res) => {
     let output = '';
 
