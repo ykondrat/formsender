@@ -1,7 +1,7 @@
 .contact-block {
     margin-top: 80px;
 }
-.contact-block h1 {
+.contact-block h2 {
     margin-top: 80px;
     margin-bottom: 20px;
     font-family: 'Play', sans-serif;
@@ -11,7 +11,7 @@
     text-align: center;
     -webkit-animation: pulse 1.5s infinite;
 }
-.contact-block h1:after {
+.contact-block h2:after {
     content: '📝';
     padding-left: 5px;
 }
